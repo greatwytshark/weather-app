@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --font: #FFF;
+    --shadow-color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    overflow-wrap: break-word;
+}
+
+html{
+    /*max-width: 100vw;*/
+    overflow-x: hidden;
+}

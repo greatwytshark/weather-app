@@ -1,0 +1,72 @@
+<div class="body">
+  <div class="header">
+    <form #form = "ngForm" (submit)="onSubmit()">
+      <input type="text" class="search" placeholder="search" name="city" [(ngModel)]="cityName">
+    </form>
+    
+  </div>
+
+  <section class="city">
+
+    <span class="left">{{date | date:'mediumTime'}} <br> 
+      <p>{{date | date: 'fullDate'}}</p>
+    </span> 
+    <span class="right">{{report.name}}</span>
+
+  </section>
+
+  <section class="info">
+    <div class="box">
+      <h6>humidity</h6> 
+      <div class="vapour">
+        <span style="--i:1;"></span>
+      
+        <span style="--i:3;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:9;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:19;"></span>
+      
+      </div>
+      <p>{{report.main.humidity}}%</p>
+    </div>
+    <div class="box">
+      <h6>min temp</h6>
+      <i class='bx bx-cloud'></i>
+      <p>{{report.main.temp_min}}°C</p>
+    </div>
+    <div class="box">
+      <h6>temp</h6>
+      <i class='bx bxs-sun' style="color: orange;"></i>
+      <p>{{report.main.temp | number: '1.0-0'}}°C</p>
+    </div>
+    <div class="box">
+      <h6>max temp</h6>
+      <i class='bx bxs-sun' style="color: orange;"></i>
+      <p>{{report.main.temp_max}}°C</p>
+    </div>
+    <div class="box">
+      <h6>wind</h6>
+      <i class='bx bx-wind'></i>
+      <p>{{report.wind.speed}}km/h</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2023 by Edmand | All Rights Reserved</p>
+  </footer>
+</div>
+<router-outlet></router-outlet>

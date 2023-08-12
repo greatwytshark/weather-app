@@ -1,0 +1,263 @@
+
+.body{
+    height: 1200px;
+    /*width: 100vw;*/
+    /*background: url(../assets/images/cloud1.jpg);*/
+    background: radial-gradient(ellipse at center center, transparent 0%, rgba(0, 0, 0, 1) 100%), url(../assets/images/cloud1.jpg);
+    background-size: cover;
+    color: var(--font);
+}
+
+.header{
+    margin: 0;
+    display: block;
+}
+
+.search{
+    width: 70%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+    padding: .8rem;
+    margin-left: 15%;
+    margin-top: 1.2rem;
+    color: white;
+    font-weight: bold;
+    background-color: teal;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    
+}
+
+.search:hover {
+    border: 1px solid white;
+}
+
+.city{
+    margin-top: 10rem;
+}
+
+.city h1{
+    font-size: 4rem;
+    
+}
+.left{
+    text-align: left;
+    float: left;
+    font-size: 4rem;
+    margin-left: 1.5rem;
+}
+
+.right{
+    text-align: right;
+    float: right;
+    font-size: 4rem;
+    margin-right: 1.8rem;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1rem;
+    margin-left: .5rem;
+    font-weight: bold;
+}
+
+.info{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+    margin-top: 10rem;
+}
+
+.info .box{
+    flex: 1 1 20rem;
+    background-color: black;
+    background: rgba(0, 0, 0, .3);
+    padding: 2rem .1rem 3rem;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.info h6{
+    font-size: 1rem;
+    padding-top: .5rem;
+}
+
+.info p{
+    font-size: 3rem;
+    margin-top: .5rem;
+}
+
+.info i{
+    font-size: 8rem;
+    margin-top: .7rem;
+}
+
+.vapour {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    margin-top: 1rem;
+}
+
+.vapour span {
+    display: block;
+    margin: 3rem 2px 2px 2px;
+    min-width: 8px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    animation: vapour 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes vapour {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-25px) scaleX(5);
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-70px) scaleX(10);
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 950px;
+}
+
+footer p{
+    
+    position: absolute;
+    bottom: 0px;
+    padding: 1rem .5rem;
+    background-color: black;
+    background: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+
+/*media queries*/
+
+@media(max-width:1364px){
+    .body{
+        height: 1392px;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        top: 1300px;
+        bottom: 10px;
+    }
+    footer p{
+        border-radius: 10px;
+    }
+}
+
+@media(max-width: 1023px) {
+    
+    .body{
+        height: 1500px;
+        overflow-x: hidden;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        top: 1460px;
+        bottom: 0;
+    
+    }
+   
+
+}
+
+@media (max-width: 681px) {
+    .body{
+        height: 2300px;
+    }
+    .right{
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin-left: 10%;
+        position: absolute;
+        top: 2250px;
+        bottom: 0;
+        
+    }
+}
+
+@media (max-width: 500px) {
+    .body {
+            height: 2200px;
+            overflow-x: hidden;
+        }
+
+    .info{
+        display: grid;
+        grid-auto-columns: 1fr;
+        gap: .1rem;
+        grid-auto-flow: row;
+    }
+
+    .city {
+        margin-top: 1rem;
+    }
+
+    .city .right {
+        margin-top: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    footer{
+        display: grid;
+        position: absolute;
+        top: 2100px;
+        bottom: 0;
+        width: 80%;
+        margin-left: 10%;
+    }
+    footer p{
+        font-size: .8rem;
+    }
+}
